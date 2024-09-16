@@ -6,43 +6,68 @@
  */
 
 export class Triangle {
+  #hypotenuse
+  #adjacentSide
+  #oppositeSide
+  #adjacentAngle
+  #oppositeAngle
+  #angleC
 
-  constructor() {}
-
-  getAreaWithBaseHeight(base, height){
-    return (base * height)/2
+  constructor(hypotenuse, adjacentSide, oppositeSide, adjacentAngle, oppositeAngle) {
+    this.#hypotenuse = hypotenuse
+    this.#adjacentSide = adjacentSide
+    this.#oppositeSide = oppositeSide
+    this.#adjacentAngle = adjacentAngle
+    this.#oppositeAngle = oppositeAngle
+    this.#angleC = 90
   }
 
-  getAreaWithThreeSides(sideOne, sideTwo, sideThree) {
-    const halfPerimeter = (sideOne + sideTwo + sideThree)/2
+  getAreaWithThreeSides() {
+    const halfPerimeter = (this.#hypotenuse + this.#adjacentSide + this.#oppositeSide) / 2
 
-    return Math.sqrt(halfPerimeter * (halfPerimeter - sideOne) * (halfPerimeter - sideTwo) * (halfPerimeter - sideThree))
+    return Math.sqrt(halfPerimeter * (halfPerimeter - this.#hypotenuse) * (halfPerimeter - this.#adjacentSide) * (halfPerimeter - this.#oppositeSide))
   }
 
-  getPerimeter(sideOne, sideTwo, sideThree) {
-    return sideOne + sideTwo + sideThree
+  getPerimeter() {
+    return this.#hypotenuse + this.#adjacentSide + this.#oppositeSide
   }
 
-  getRemainingAngle(angleOne, angleTwo) {
-    const sum = angleOne + angleTwo
-    return 180 - sum
+  getRemainingAngle() {
+    if (this.#adjacentAngle) {
+      return 180 - (this.#adjacentAngle + this.#angleC)
+    } else {
+      return 180 - (this.#oppositeAngle + this.#angleC)
+    }
   }
 
-  getHypotenuse(legOne, legTwo) {
-    return Math.sqrt(Math.pow(legOne, 2) + Math.pow(legTwo, 2))
+  getHypotenuse() {
+    return Math.sqrt(Math.pow(this.#adjacentSide, 2) + Math.pow(this.#oppositeSide, 2))
   }
 
-  getLeg(hypotenuse, leg) {
-    return Math.sqrt(Math.pow(hypotenuse, 2) -  Math.pow(leg, 2))
+  getLeg() {
+    if (this.#adjacentSide) {
+      return Math.sqrt(Math.pow(this.#hypotenuse, 2) - Math.pow(this.#adjacentSide, 2))
+    } else {
+      return Math.sqrt(Math.pow(this.#hypotenuse, 2) - Math.pow(this.#oppositeSide, 2))
+    }
   }
 
-  cosinus(angle, hypotenuse) {
+  getLegs() {
     let legs = []
-    const radians = angle * (Math.PI / 180)
-    const closeLeg = hypotenuse * Math.cos(radians)
-    const oppositeLeg = hypotenuse * Math.sin(radians)
-    legs.push(closeLeg)
-    legs.push(oppositeLeg)
-    return legs
+    if (this.#adjacentAngle) {
+      const radians = this.#adjacentAngle * (Math.PI / 180)
+      const adjacentSide = this.#hypotenuse * Math.cos(radians)
+      const oppositeSide = this.#hypotenuse * Math.sin(radians)
+      legs.push(adjacentSide)
+      legs.push(oppositeSide)
+      return legs
+    } else {
+      const radians = this.#oppositeAngle * (Math.PI / 180)
+      const adjacentSide = this.#hypotenuse * Math.cos(radians)
+      const oppositeSide = this.#hypotenuse * Math.sin(radians)
+      legs.push(adjacentSide)
+      legs.push(oppositeSide)
+      return legs
+    }
   }
 }

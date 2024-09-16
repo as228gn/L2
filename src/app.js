@@ -5,9 +5,9 @@
  * @version 2.0.0
  */
 
-import { Triangle } from './Triangle.js'
+import { Trigonometry } from './Trigonometry.js'
 
-const triangle = new Triangle()
+const triangle = new Trigonometry()
 
-const area = triangle.cosinus(42, 11)
+const area = Trigonometry.getAnglesWhitThreeSides(6, 7.2)
 console.log(area)
