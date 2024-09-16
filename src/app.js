@@ -6,8 +6,11 @@
  */
 
 import { Trigonometry } from './Trigonometry.js'
+import { Triangle } from './Triangle.js'
 
-const triangle = new Trigonometry()
+const triangle = new Triangle()
+triangle.hypotenuse = 11.3
+triangle.oppositeSide = 8
+triangle.oppositeAngle = 44.9
 
-const area = Trigonometry.getAnglesWhitThreeSides(6, 7.2)
-console.log(area)
+console.log(triangle.getHypotenuseAndAdjacentSide())
