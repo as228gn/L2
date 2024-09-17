@@ -5,6 +5,8 @@
  * @version 1.0.0
  */
 
+import { Validate } from './Validate.js'
+
 export class Triangle {
   #hypotenuse
   #adjacentSide
@@ -12,17 +14,14 @@ export class Triangle {
   #adjacentAngle
   #oppositeAngle
   #angle = 90
+ 
 
-  // constructor(hypotenuse = 0, adjacentSide = 0, oppositeSide = 0, adjacentAngle = 0, oppositeAngle = 0) {
-  //   this.#hypotenuse = hypotenuse
-  //   this.#adjacentSide = adjacentSide
-  //   this.#oppositeSide = oppositeSide
-  //   this.#adjacentAngle = adjacentAngle
-  //   this.#oppositeAngle = oppositeAngle
-  //   this.#angle = 90
-  // }
+  constructor() {
+  }
 
   set hypotenuse(hypotenuse) {
+    const validate = new Validate()
+    validate.validatePositiveNumber(hypotenuse)
     this.#hypotenuse = hypotenuse
   }
 
@@ -31,6 +30,8 @@ export class Triangle {
   }
 
   set adjacentSide(adjacentSide) {
+    const validate = new Validate()
+    validate.validatePositiveNumber(adjacentSide)
     this.#adjacentSide = adjacentSide
   }
 
@@ -39,6 +40,8 @@ export class Triangle {
   }
 
   set oppositeSide(oppositeSide) {
+    const validate = new Validate()
+    validate.validatePositiveNumber(oppositeSide)
     this.#oppositeSide = oppositeSide
   }
 
@@ -47,6 +50,8 @@ export class Triangle {
   }
 
   set adjacentAngle(adjacentAngle) {
+    const validate = new Validate()
+    validate.validatePositiveNumber(adjacentAngle)
     this.#adjacentAngle = adjacentAngle
   }
 
@@ -55,6 +60,8 @@ export class Triangle {
   }
 
   set oppositeAngle(oppositeAngle) {
+    const validate = new Validate()
+    validate.validatePositiveNumber(oppositeAngle)
     this.#oppositeAngle = oppositeAngle
   }
 
@@ -67,12 +74,18 @@ export class Triangle {
   }
 
   getAreaWithThreeSides() {
+    if (!this.#hypotenuse || !this.#adjacentSide || !this.#oppositeSide) {
+      throw new TypeError('Function call must contain hypotenuse, adjacentside and oppositeside.')
+    }
     const halfPerimeter = (this.#hypotenuse + this.#adjacentSide + this.#oppositeSide) / 2
 
     return Math.sqrt(halfPerimeter * (halfPerimeter - this.#hypotenuse) * (halfPerimeter - this.#adjacentSide) * (halfPerimeter - this.#oppositeSide))
   }
 
   getPerimeter() {
+    if (!this.#hypotenuse || !this.#adjacentSide || !this.#oppositeSide) {
+      throw new TypeError('Function call must contain hypotenuse, adjacentside and oppositeside.')
+    }
     return this.#hypotenuse + this.#adjacentSide + this.#oppositeSide
   }
 
@@ -85,6 +98,9 @@ export class Triangle {
   }
 
   getHypotenuse() {
+    if (!this.#adjacentSide || !this.#oppositeSide) {
+      throw new TypeError('Function call must contain adjacentside and oppositeside.')
+    }
     return Math.sqrt(Math.pow(this.#adjacentSide, 2) + Math.pow(this.#oppositeSide, 2))
   }
 
@@ -96,53 +112,59 @@ export class Triangle {
     }
   }
 
-  getLegs() {
-    let legs = []
-    if (this.#adjacentAngle) {
-      const radians = this.#adjacentAngle * (Math.PI / 180)
-      const adjacentSide = this.#hypotenuse * Math.cos(radians)
-      const oppositeSide = this.#hypotenuse * Math.sin(radians)
-      legs.push(adjacentSide)
-      legs.push(oppositeSide)
-      return legs
-    } else {
-      const radians = this.#oppositeAngle * (Math.PI / 180)
-      const adjacentSide = this.#hypotenuse * Math.cos(radians)
-      const oppositeSide = this.#hypotenuse * Math.sin(radians)
-      legs.push(adjacentSide)
-      legs.push(oppositeSide)
-      return legs
+  getAdjacentLegWithAdjacentAngleAndHypotenuse() {
+    if (!this.#hypotenuse || !this.#adjacentAngle) {
+      throw new TypeError('Function call must contain hypotenuse and adjacentangle.')
     }
+    const radians = this.#adjacentAngle * (Math.PI / 180)
+    const adjacentSide = this.#hypotenuse * Math.cos(radians)
+    return adjacentSide
   }
 
-  getHypotenuseAndOppositeSide() {
-    let legs = []
+  getOppositeLegWithOppositeAngleAndHypotenuse() {
+    if (!this.#hypotenuse || !this.#oppositeAngle) {
+      throw new TypeError('Function call must contain hypotenuse and oppositeangle.')
+    }
+    const radians = this.#oppositeAngle * (Math.PI / 180)
+    const oppositeSide = this.#hypotenuse * Math.sin(radians)
+    return oppositeSide
+  }
+
+  getHypotenuseWithAdjacentAngleAndSide() {
+    if (!this.#adjacentSide || !this.#adjacentAngle) {
+      throw new TypeError('Function call must contain adjacentside and adjacentangle.')
+    }
     const radians = this.#adjacentAngle * (Math.PI / 180)
     const hypotenuse = this.#adjacentSide / Math.cos(radians)
-    const oppositeSide = this.#adjacentSide * Math.tan(radians)
-    legs.push('Hypotenuse: ' + hypotenuse)
-    legs.push('Oppositeside: ' + oppositeSide)
-    return legs
+    return hypotenuse
   }
 
-  getHypotenuseAndAdjacentSide() {
-    let legs = []
+  getHypotenuseWithOpposteSideAndAngle() {
+    if (!this.#oppositeSide || this.#oppositeAngle) {
+      throw new TypeError('Function call must contain oppositeangle and oppositeside.')
+    }
     const radians = this.#oppositeAngle * (Math.PI / 180)
     const hypotenuse = this.#oppositeSide / Math.sin(radians)
-    const adjacentSide = this.#hypotenuse * Math.cos(radians)
-    legs.push('Hypotenuse: ' + hypotenuse)
-    legs.push('Adjacentside: ' + adjacentSide)
-    return legs
+    return hypotenuse
   }
 
-  getAnglesWhitThreeSides() {
-    let degrees = []
-    const a = this.#adjacentSide/this.#hypotenuse
+  getAngleWithAdjacentSideAndHypotenus() {
+    if (!this.#hypotenuse || !this.#adjacentSide) {
+      throw new TypeError('Function call must contain hypotenuse and adjacentside.')
+    }
+    const a = this.#adjacentSide / this.#hypotenuse
     let radiusAngle = Math.acos(a)
-    const adjacentAngle = radiusAngle * (180/Math.PI)
-    const oppositeAngle = 180 - (90 + adjacentAngle)
-    degrees.push('Adjacentangle: ' + adjacentAngle)
-    degrees.push('OppositeAngle: ' + oppositeAngle)
-    return degrees
+    const adjacentAngle = radiusAngle * (180 / Math.PI)
+    return adjacentAngle
+  }
+
+  getAngleWithOppositeSideAndHypotenuse() {
+    if (!this.#hypotenuse || !this.#oppositeSide) {
+      throw new TypeError('Function call must contain hypotenuse and oppositeside.')
+    }
+    const a = this.#oppositeSide / this.#hypotenuse
+    let radiusAngle = Math.asin(a)
+    const oppositeAngle = radiusAngle * (180 / Math.PI)
+    return oppositeAngle
   }
 }

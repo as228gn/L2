@@ -5,12 +5,12 @@
  * @version 2.0.0
  */
 
-import { Trigonometry } from './Trigonometry.js'
 import { Triangle } from './Triangle.js'
 
 const triangle = new Triangle()
 triangle.hypotenuse = 11.3
 triangle.oppositeSide = 8
 triangle.oppositeAngle = 44.9
+triangle.adjacentSide = 8
 
-console.log(triangle.getHypotenuseAndAdjacentSide())
+console.log(triangle.getHypotenuse())

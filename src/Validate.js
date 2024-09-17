@@ -5,15 +5,13 @@
  * @version 1.0.0
  */
 
-import { Triangle } from './Triangle.js'
-
 export class Validate {
 
-  constructor() {}
+  constructor() { }
 
-  getInformationOfTriangle(hypotenuse, adjacentSide, oppositeSide, angle){
-    if (hypotenuse && adjacentSide) {
-
+  validatePositiveNumber(number) {
+    if (number < 1 || typeof number === 'string') {
+      throw new TypeError('Parameter must be a positive number.')
     }
   }
 }
