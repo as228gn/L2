@@ -1,5 +1,5 @@
 /**
- * @file Module for the class Triangle.
+ * @file Module for the class RightAngledTriangle.
  * @module src/Triangle
  * @author Anna Ståhlberg <as228gn@student.lnu.se>
  * @version 1.0.0
@@ -7,14 +7,14 @@
 
 import { Validate } from './Validate.js'
 
-export class Triangle {
+export class RightAngledTriangle {
   #hypotenuse
   #adjacentSide
   #oppositeSide
   #adjacentAngle
   #oppositeAngle
   #angle = 90
- 
+
 
   constructor() {
   }
@@ -89,12 +89,18 @@ export class Triangle {
     return this.#hypotenuse + this.#adjacentSide + this.#oppositeSide
   }
 
-  getRemainingAngle() {
-    if (this.#adjacentAngle) {
-      return 180 - (this.#adjacentAngle + this.#angle)
-    } else {
-      return 180 - (this.#oppositeAngle + this.#angle)
+  getOppositeAngleWithAdjacentAngle() {
+    if (!this.#adjacentAngle) {
+      throw new TypeError('Function call must contain adjacentangle.')
     }
+    return 180 - (this.#adjacentAngle + this.#angle)
+  }
+
+  getAdjacentAngleWithOppositeAngle() {
+    if (!this.#oppositeAngle) {
+      throw new TypeError('Function call must contain oppositeangle.')
+    }
+    return 180 - (this.#oppositeAngle + this.#angle)
   }
 
   getHypotenuse() {
@@ -104,12 +110,18 @@ export class Triangle {
     return Math.sqrt(Math.pow(this.#adjacentSide, 2) + Math.pow(this.#oppositeSide, 2))
   }
 
-  getLeg() {
-    if (this.#adjacentSide) {
-      return Math.sqrt(Math.pow(this.#hypotenuse, 2) - Math.pow(this.#adjacentSide, 2))
-    } else {
-      return Math.sqrt(Math.pow(this.#hypotenuse, 2) - Math.pow(this.#oppositeSide, 2))
+  getOppositelegWithAdjacentSideAndHypotenuse() {
+    if (!this.#adjacentSide || !this.#hypotenuse) {
+      throw new TypeError('Function call must contain adjacentside and hypotenuse.')
     }
+    return Math.sqrt(Math.pow(this.#hypotenuse, 2) - Math.pow(this.#adjacentSide, 2))
+  }
+
+  getAdjacentLegWithOppositeSideAndHypotenuse() {
+    if (!this.#oppositeSide || !this.#hypotenuse) {
+      throw new TypeError('Function call must contain adjacentside and oppositeside.')
+    }
+    return Math.sqrt(Math.pow(this.#hypotenuse, 2) - Math.pow(this.#oppositeSide, 2))
   }
 
   getAdjacentLegWithAdjacentAngleAndHypotenuse() {
@@ -121,30 +133,12 @@ export class Triangle {
     return adjacentSide
   }
 
-  getOppositeLegWithOppositeAngleAndHypotenuse() {
-    if (!this.#hypotenuse || !this.#oppositeAngle) {
-      throw new TypeError('Function call must contain hypotenuse and oppositeangle.')
-    }
-    const radians = this.#oppositeAngle * (Math.PI / 180)
-    const oppositeSide = this.#hypotenuse * Math.sin(radians)
-    return oppositeSide
-  }
-
   getHypotenuseWithAdjacentAngleAndSide() {
     if (!this.#adjacentSide || !this.#adjacentAngle) {
       throw new TypeError('Function call must contain adjacentside and adjacentangle.')
     }
     const radians = this.#adjacentAngle * (Math.PI / 180)
     const hypotenuse = this.#adjacentSide / Math.cos(radians)
-    return hypotenuse
-  }
-
-  getHypotenuseWithOpposteSideAndAngle() {
-    if (!this.#oppositeSide || this.#oppositeAngle) {
-      throw new TypeError('Function call must contain oppositeangle and oppositeside.')
-    }
-    const radians = this.#oppositeAngle * (Math.PI / 180)
-    const hypotenuse = this.#oppositeSide / Math.sin(radians)
     return hypotenuse
   }
 
@@ -166,5 +160,18 @@ export class Triangle {
     let radiusAngle = Math.asin(a)
     const oppositeAngle = radiusAngle * (180 / Math.PI)
     return oppositeAngle
+  }
+
+  increaseOrDecreaseByPercent(percent) {
+    if (!this.#hypotenuse || !this.#adjacentSide || !this.#oppositeSide) {
+      throw new TypeError('Function call must contain hypotenuse, adjacentside and oppositeside.')
+    }
+    
+    const p = (100 + percent)/100
+    const a = Math.sqrt(p)
+
+    this.#hypotenuse = a * this.#hypotenuse
+    this.#adjacentSide = a * this.#adjacentSide
+    this.#oppositeSide = a * this.#oppositeSide
   }
 }
