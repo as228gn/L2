@@ -1,13 +1,13 @@
 /**
- * @file Module for the class Rektangle.
- * @module src/Rektangle
+ * @file Module for the class Rectangle.
+ * @module src/Rectangle
  * @author Anna Ståhlberg <as228gn@student.lnu.se>
  * @version 1.0.0
  */
 
 import { Validate } from './Validate.js'
 
-export class Rektangle {
+export class Rectangle {
   #length
   #width
 

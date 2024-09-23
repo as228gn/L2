@@ -61,6 +61,7 @@ export class Circle {
     const a = Math.sqrt(p)
 
     this.#radius = a * this.#radius
+    this.#diameter = this.#radius * 2
   }
 
 }

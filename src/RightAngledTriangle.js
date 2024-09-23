@@ -1,6 +1,6 @@
 /**
  * @file Module for the class RightAngledTriangle.
- * @module src/Triangle
+ * @module src/RightAngledTriangle
  * @author Anna Ståhlberg <as228gn@student.lnu.se>
  * @version 1.0.0
  */
@@ -14,10 +14,6 @@ export class RightAngledTriangle {
   #adjacentAngle
   #oppositeAngle
   #angle = 90
-
-
-  constructor() {
-  }
 
   set hypotenuse(hypotenuse) {
     const validate = new Validate()
@@ -89,6 +85,27 @@ export class RightAngledTriangle {
     return this.#hypotenuse + this.#adjacentSide + this.#oppositeSide
   }
 
+  getHypotenuse() {
+    if (!this.#adjacentSide || !this.#oppositeSide) {
+      throw new TypeError('Function call must contain adjacentside and oppositeside.')
+    }
+    return Math.sqrt(Math.pow(this.#adjacentSide, 2) + Math.pow(this.#oppositeSide, 2))
+  }
+
+  getOppositeSideWithAdjacentSideAndHypotenuse() {
+    if (!this.#adjacentSide || !this.#hypotenuse) {
+      throw new TypeError('Function call must contain adjacentside and hypotenuse.')
+    }
+    return Math.sqrt(Math.pow(this.#hypotenuse, 2) - Math.pow(this.#adjacentSide, 2))
+  }
+
+  getAdjacentSideWithOppositeSideAndHypotenuse() {
+    if (!this.#oppositeSide || !this.#hypotenuse) {
+      throw new TypeError('Function call must contain adjacentside and oppositeside.')
+    }
+    return Math.sqrt(Math.pow(this.#hypotenuse, 2) - Math.pow(this.#oppositeSide, 2))
+  }
+
   getOppositeAngleWithAdjacentAngle() {
     if (!this.#adjacentAngle) {
       throw new TypeError('Function call must contain adjacentangle.')
@@ -103,28 +120,7 @@ export class RightAngledTriangle {
     return 180 - (this.#oppositeAngle + this.#angle)
   }
 
-  getHypotenuse() {
-    if (!this.#adjacentSide || !this.#oppositeSide) {
-      throw new TypeError('Function call must contain adjacentside and oppositeside.')
-    }
-    return Math.sqrt(Math.pow(this.#adjacentSide, 2) + Math.pow(this.#oppositeSide, 2))
-  }
-
-  getOppositelegWithAdjacentSideAndHypotenuse() {
-    if (!this.#adjacentSide || !this.#hypotenuse) {
-      throw new TypeError('Function call must contain adjacentside and hypotenuse.')
-    }
-    return Math.sqrt(Math.pow(this.#hypotenuse, 2) - Math.pow(this.#adjacentSide, 2))
-  }
-
-  getAdjacentLegWithOppositeSideAndHypotenuse() {
-    if (!this.#oppositeSide || !this.#hypotenuse) {
-      throw new TypeError('Function call must contain adjacentside and oppositeside.')
-    }
-    return Math.sqrt(Math.pow(this.#hypotenuse, 2) - Math.pow(this.#oppositeSide, 2))
-  }
-
-  getAdjacentLegWithAdjacentAngleAndHypotenuse() {
+  getAdjacentSideWithAdjacentAngleAndHypotenuse() {
     if (!this.#hypotenuse || !this.#adjacentAngle) {
       throw new TypeError('Function call must contain hypotenuse and adjacentangle.')
     }
@@ -142,7 +138,7 @@ export class RightAngledTriangle {
     return hypotenuse
   }
 
-  getAngleWithAdjacentSideAndHypotenus() {
+  getAdjacentAngleWithAdjacentSideAndHypotenus() {
     if (!this.#hypotenuse || !this.#adjacentSide) {
       throw new TypeError('Function call must contain hypotenuse and adjacentside.')
     }
@@ -152,7 +148,7 @@ export class RightAngledTriangle {
     return adjacentAngle
   }
 
-  getAngleWithOppositeSideAndHypotenuse() {
+  getOppositeAngleWithOppositeSideAndHypotenuse() {
     if (!this.#hypotenuse || !this.#oppositeSide) {
       throw new TypeError('Function call must contain hypotenuse and oppositeside.')
     }
