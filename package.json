@@ -2,10 +2,10 @@
   "name": "l2",
   "version": "1.0.0",
   "description": "Geometry module",
-  "main": "app.js",
+  "main": "TestApp.js",
   "type": "module",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node Test/TestApp.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

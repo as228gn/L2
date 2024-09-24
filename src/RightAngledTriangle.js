@@ -69,6 +69,12 @@ export class RightAngledTriangle {
     return this.#angle
   }
 
+  /**
+   * Returns the area.
+   *
+   * @throws {TypeError} an error if the properties needed isn´t there.
+   * @returns { number } the area of the rightAngledTriangle.
+   */
   getAreaWithThreeSides() {
     if (!this.#hypotenuse || !this.#adjacentSide || !this.#oppositeSide) {
       throw new TypeError('Function call must contain hypotenuse, adjacentside and oppositeside.')
@@ -78,6 +84,12 @@ export class RightAngledTriangle {
     return Math.sqrt(halfPerimeter * (halfPerimeter - this.#hypotenuse) * (halfPerimeter - this.#adjacentSide) * (halfPerimeter - this.#oppositeSide))
   }
 
+  /**
+   * Returns the perimeter.
+   *
+   * @throws {TypeError} an error if the properties needed isn´t there.
+   * @returns { number } the perimeter of the rightAngledTriangle.
+   */
   getPerimeter() {
     if (!this.#hypotenuse || !this.#adjacentSide || !this.#oppositeSide) {
       throw new TypeError('Function call must contain hypotenuse, adjacentside and oppositeside.')
@@ -85,6 +97,12 @@ export class RightAngledTriangle {
     return this.#hypotenuse + this.#adjacentSide + this.#oppositeSide
   }
 
+  /**
+   * Returns the hypotenuse.
+   *
+   * @throws {TypeError} an error if the properties needed isn´t there.
+   * @returns { number } the hypotenuse of the rightAngledTriangle.
+   */
   getHypotenuse() {
     if (!this.#adjacentSide || !this.#oppositeSide) {
       throw new TypeError('Function call must contain adjacentside and oppositeside.')
@@ -92,6 +110,12 @@ export class RightAngledTriangle {
     return Math.sqrt(Math.pow(this.#adjacentSide, 2) + Math.pow(this.#oppositeSide, 2))
   }
 
+  /**
+   * Returns the oppositeside.
+   *
+   * @throws {TypeError} an error if the properties needed isn´t there.
+   * @returns { number } the oppositeside of the rightAngledTriangle.
+   */
   getOppositeSideWithAdjacentSideAndHypotenuse() {
     if (!this.#adjacentSide || !this.#hypotenuse) {
       throw new TypeError('Function call must contain adjacentside and hypotenuse.')
@@ -99,6 +123,12 @@ export class RightAngledTriangle {
     return Math.sqrt(Math.pow(this.#hypotenuse, 2) - Math.pow(this.#adjacentSide, 2))
   }
 
+  /**
+   * Returns the adjacentside.
+   *
+   * @throws {TypeError} an error if the properties needed isn´t there.
+   * @returns { number } the adjacentside of the rightAngledTriangle.
+   */
   getAdjacentSideWithOppositeSideAndHypotenuse() {
     if (!this.#oppositeSide || !this.#hypotenuse) {
       throw new TypeError('Function call must contain adjacentside and oppositeside.')
@@ -106,6 +136,12 @@ export class RightAngledTriangle {
     return Math.sqrt(Math.pow(this.#hypotenuse, 2) - Math.pow(this.#oppositeSide, 2))
   }
 
+  /**
+   * Returns the opposite angle.
+   *
+   * @throws {TypeError} an error if the properties needed isn´t there.
+   * @returns { number } the opposite angle of the rightAngledTriangle.
+   */
   getOppositeAngleWithAdjacentAngle() {
     if (!this.#adjacentAngle) {
       throw new TypeError('Function call must contain adjacentangle.')
@@ -113,6 +149,12 @@ export class RightAngledTriangle {
     return 180 - (this.#adjacentAngle + this.#angle)
   }
 
+  /**
+   * Returns the adjacent angle.
+   *
+   * @throws {TypeError} an error if the properties needed isn´t there.
+   * @returns { number } the adjacent angle of the rightAngledTriangle.
+   */
   getAdjacentAngleWithOppositeAngle() {
     if (!this.#oppositeAngle) {
       throw new TypeError('Function call must contain oppositeangle.')

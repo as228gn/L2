@@ -79,4 +79,7 @@ getOppositeAngleWithOppositeSideAndHypotenuse()
 Returns the oppositeAngle, needs the oppositeSide and the hypotenuse properties.  
 
 increaseOrDecreaseByPercent()  
-Sets the new property measurments to increase the percentage by the percent being sent in to the function. 
+Sets the new property measurments to increase the percentage by the percent being sent in to the function.  
+
+## License
+MIT
