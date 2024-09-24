@@ -1,5 +1,5 @@
 /**
- * @file The starting point of the application.
+ * @file The testing point of the application.
  * @module src/TestApp
  * @author Anna Ståhlberg <as228gn@student.lnu.se>
  * @version 1.0.0

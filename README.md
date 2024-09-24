@@ -1,6 +1,7 @@
 # Geometry module
-This is a geometry module that helps you calculate different calculations on a right-angled triangle, rectangle and circle. It helps you calculate the area and perimeter, on the right-angled triangle it also helps you calculate the angles and sides. For all three shapes you can increase the area by a percentage and get the new measurements for the different sides.
+This is a geometry module that helps you calculate different calculations on a right-angled triangle, rectangle and circle. It helps you calculate the area and perimeter. On the right-angled triangle it also helps you calculate the angles and sides. For all three shapes you can increase the area by a percentage and get the new measurements for the different sides.
 
+## Installation
 ## Usage
 To use the module you import the class you want to use (Circle, Rectangle or RightAngledTriangle) and make a new object of it, you set the known properties and call the function you want to use. Se example below.
 ![Example](img/CodeExample.png)
