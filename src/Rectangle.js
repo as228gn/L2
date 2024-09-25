@@ -7,6 +7,9 @@
 
 import { Validate } from './Validate.js'
 
+/**
+ * Represents a rectangle.
+ */
 export class Rectangle {
   #length
   #width
@@ -31,26 +34,44 @@ export class Rectangle {
     return this.#width
   }
 
-  getPerimeter() {
-    if (!this.#length || !this.#width) {
-      throw new TypeError('Function call must contain length and width.')
-    }
-    return 2 * (this.#length + this.#width)
-  }
-
+  /**
+   * Returns the area.
+   *
+   * @throws {Error} Throws an error if the length or width property is not defined.
+   * @returns { number } The area of the rectangle.
+   */
   getArea() {
     if (!this.#length || !this.#width) {
-      throw new TypeError('Function call must contain length and width.')
+      throw new Error('Function call must contain length and width.')
     }
     return this.#length * this.#width
   }
 
+  /**
+  * Returns the perimeter.
+  *
+  * @throws {Error} Throws an error if the length or width property is not defined.
+  * @returns { number } The perimeter of the rectangle.
+  */
+  getPerimeter() {
+    if (!this.#length || !this.#width) {
+      throw new Error('Function call must contain length and width.')
+    }
+    return 2 * (this.#length + this.#width)
+  }
+
+  /**
+   * Increases the rectangle by a percentage and sets the new properties.
+   *
+   * @throws {Error} Throws an error if the length or width property is not defined.
+   * @param { number } percent The percentage to increase or decrease the rectangle with.
+   */
   increaseOrDecreaseByPercent(percent) {
     if (!this.#length || !this.#width) {
-      throw new TypeError('Function call must contain length and width.')
+      throw new Error('Function call must contain length and width.')
     }
-    
-    const p = (100 + percent)/100
+
+    const p = (100 + percent) / 100
     const a = Math.sqrt(p)
 
     this.#length = a * this.#length

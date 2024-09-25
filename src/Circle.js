@@ -7,6 +7,9 @@
 
 import { Validate } from './Validate.js'
 
+/**
+ * Represents a circle.
+ */
 export class Circle {
   #diameter
   #radius
@@ -31,33 +34,57 @@ export class Circle {
     return this.#radius
   }
 
-  getCircumferenceWithRadius() {
-    if (!this.#radius) {
-      throw new TypeError('Function call must contain radius.')
-    }
-    return 2 * this.#radius * Math.PI
-  }
-
-  getCircumferenceWithDiameter() {
-    if (!this.#diameter) {
-      throw new TypeError('Function call must contain diameter.')
-    }
-    return this.#diameter * Math.PI
-  }
-
+  /**
+  * Returns the area.
+  *
+  * @throws {Error} Throws an error if the radius property is not defined.
+  * @returns { number } The area of the circle.
+  */
   getArea() {
     if (!this.#radius) {
-      throw new TypeError('Function call must contain radius.')
+      throw new Error('Function call must contain radius.')
     }
     return Math.PI * Math.pow(this.#radius, 2)
   }
 
+  /**
+   * Returns the circumference.
+   *
+   * @throws {Error} Throws an error if the radius property is not defined.
+   * @returns { number } The circumference of the circle.
+   */
+  getCircumferenceWithRadius() {
+    if (!this.#radius) {
+      throw new Error('Function call must contain radius.')
+    }
+    return 2 * this.#radius * Math.PI
+  }
+
+  /**
+   * Returns the circumference.
+   *
+   * @throws {Error} Throws an error if the diameter property is not defined.
+   * @returns { number } The circumference of the circle.
+   */
+  getCircumferenceWithDiameter() {
+    if (!this.#diameter) {
+      throw new Error('Function call must contain diameter.')
+    }
+    return this.#diameter * Math.PI
+  }
+
+  /**
+   * Increases the circle by a percentage and sets the new properties.
+   *
+   * @throws {Error} Throws an error if the radius property is not defined.
+   * @param { number } percent The percentage to increase or decrease the circle with.
+   */
   increaseOrDecreaseByPercent(percent) {
     if (!this.#radius) {
-      throw new TypeError('Function call must contain radius.')
+      throw new Error('Function call must contain radius.')
     }
-    
-    const p = (100 + percent)/100
+
+    const p = (100 + percent) / 100
     const a = Math.sqrt(p)
 
     this.#radius = a * this.#radius

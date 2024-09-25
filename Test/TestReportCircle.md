@@ -5,9 +5,9 @@ The tests are conducted manually, the properties are set to the object and the f
 
 | Function | Properties | Expected Result | Result | Status |
 |----------|------------|-----------------|--------|--------|
+| getArea() | radius = 5 | 78.53981633974483 | 78.53981633974483 | Passed |
 | getCircumferenceWithRadius() | radius = 5 | 31.41592653589793 | 31.41592653589793 | Passed |
 | getCircumferenceWithDiameter() | diameter = 10 | 31.41592653589793 | 31.41592653589793 | Passed |
-| getArea() | radius = 5 | 78.53981633974483 | 78.53981633974483 | Passed |
 
 | Function | In | Properties | New properties | Status |
 |----------|----|------------|----------------|--------|

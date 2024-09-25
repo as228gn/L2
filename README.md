@@ -10,15 +10,15 @@ To use the module you import the class you want to use (Circle, Rectangle or Rig
 radius  
 diameter
 #### Functions
+getArea()  
+Returns the area, needs the radius property.  
+
 getCircumferenceWithRadius()  
 Returns the circumference, needs the radius property.  
 
 getCircumferenceWithDiameter()  
 Returns the circumference, needs the diameter property.  
-
-getArea()  
-Returns the area, needs the radius property.  
-
+  
 increaseOrDecreaseByPercent()  
 Sets the new property measurments to increase the percentage by the percent being sent in to the function.  
 ### Rectangle
@@ -26,10 +26,10 @@ Sets the new property measurments to increase the percentage by the percent bein
 length  
 width
 #### Functions
-getPerimeter()  
+getArea()  
 Returns the perimeter, needs the length and width properties.  
 
-getArea()  
+getPerimeter()  
 Returns the perimeter, needs the length and width properties.  
 
 increaseOrDecreaseByPercent()  

@@ -28,52 +28,52 @@ if (perimeterTriangel != 30.8) {
 }
 
 const hypotenuse = triangle.getHypotenuse()
-if (hypotenuse != 12.806248474865697 ) {
+if (hypotenuse != 12.806248474865697) {
   console.log('getHypotenuse() in RightAngledTriangel failed')
 }
 
 const oppositeSide = triangle.getOppositeSideWithAdjacentSideAndHypotenuse()
-if (oppositeSide != 9.991996797437439 ) {
+if (oppositeSide != 9.991996797437439) {
   console.log('getOppositeSideWithAdjacentSideAndHypotenuse() in RightAngledTriangel failed')
 }
 
 const adjacentSide = triangle.getAdjacentSideWithOppositeSideAndHypotenuse()
-if (adjacentSide != 7.989993742175273 ) {
+if (adjacentSide != 7.989993742175273) {
   console.log('getAdjacentSideWithOppositeSideAndHypotenuse() in RightAngledTriangel failed')
 }
 
 const oppositeAngle = triangle.getOppositeAngleWithAdjacentAngle()
-if (oppositeAngle != 39 ) {
+if (oppositeAngle != 39) {
   console.log('getOppositeAngleWithAdjacentAngle() in RightAngledTriangel failed')
 }
 
 const adjacentAngle = triangle.getAdjacentAngleWithOppositeAngle()
-if (adjacentAngle != 51 ) {
+if (adjacentAngle != 51) {
   console.log('getAdjacentAngleWithOppositeAngle() in RightAngledTriangel failed')
 }
 
 const adjacentSideA = triangle.getAdjacentSideWithAdjacentAngleAndHypotenuse()
-if (adjacentSideA != 8.05530100543792 ) {
+if (adjacentSideA != 8.05530100543792) {
   console.log('getAdjacentSideWithAdjacentAngleAndHypotenuse() in RightAngledTriangel failed')
 }
 
 const hypotenuseA = triangle.getHypotenuseWithAdjacentAngleAndSide()
-if (hypotenuseA != 12.712125832525995 ) {
+if (hypotenuseA != 12.712125832525995) {
   console.log('getHypotenuseWithAdjacentAngleAndSide() in RightAngledTriangel failed')
 }
 
 const adjacentAngleA = triangle.getAdjacentAngleWithAdjacentSideAndHypotenus()
-if (adjacentAngleA != 51.31781254651057 ) {
+if (adjacentAngleA != 51.31781254651057) {
   console.log('getAdjacentAngleWithAdjacentSideAndHypotenus() in RightAngledTriangel failed')
 }
 
 const oppositeAngleA = triangle.getOppositeAngleWithOppositeSideAndHypotenuse()
-if (oppositeAngleA != 51.37516712694704 ) {
+if (oppositeAngleA != 51.37516712694704) {
   console.log('getOppositeAngleWithOppositeSideAndHypotenuse() in RightAngledTriangel failed')
 }
 
 const increaseTriangle = triangle.increaseOrDecreaseByPercent(45)
-if (triangle.adjacentSide != 9.633275663033837 && triangle.oppositeSide != 12.041594578792296 && triangle.hypotenuse != 15.41324106085414 ) {
+if (triangle.adjacentSide != 9.633275663033837 && triangle.oppositeSide != 12.041594578792296 && triangle.hypotenuse != 15.41324106085414) {
   console.log('increaseOrDecreaseByPercent() in RightAngledTriangel failed')
 }
 
@@ -82,18 +82,18 @@ const rectangle = new Rectangle()
 rectangle.length = 10
 rectangle.width = 8
 
-const getPerimeterRectangle = rectangle.getPerimeter()
-if (getPerimeterRectangle != 36 ) {
-  console.log('getPerimeter() in Rectangle failed')
-}
-
 const areaRectangle = rectangle.getArea()
-if (areaRectangle != 80 ) {
+if (areaRectangle != 80) {
   console.log('getArea() in Rectangle failed')
 }
 
+const getPerimeterRectangle = rectangle.getPerimeter()
+if (getPerimeterRectangle != 36) {
+  console.log('getPerimeter() in Rectangle failed')
+}
+
 const increaseRectangle = rectangle.increaseOrDecreaseByPercent(45)
-if (rectangle.length != 12.041594578792296 && rectangle.width != 9.633275663033837 ) {
+if (rectangle.length != 12.041594578792296 && rectangle.width != 9.633275663033837) {
   console.log('increaseOrDecreaseByPercent() in Rectangle failed')
 }
 
@@ -102,23 +102,23 @@ const circle = new Circle()
 circle.radius = 5
 circle.diameter = 10
 
+const areaCircle = circle.getArea()
+if (areaCircle != 78.53981633974483) {
+  console.log('getArea() in Circle failed')
+}
+
 const circumferenceR = circle.getCircumferenceWithRadius()
-if (circumferenceR != 31.41592653589793 ) {
+if (circumferenceR != 31.41592653589793) {
   console.log('getCircumferenceWithRadius() in Circle failed')
 }
 
 const circumferenceD = circle.getCircumferenceWithDiameter()
-if (circumferenceD != 31.41592653589793 ) {
+if (circumferenceD != 31.41592653589793) {
   console.log('getCircumferenceWithDiameter() in Circle failed')
 }
 
-const areaCircle = circle.getArea()
-if (areaCircle != 78.53981633974483 ) {
-  console.log('getArea() in Circle failed')
-}
-
 const increaseCircle = circle.increaseOrDecreaseByPercent(45)
-if (circle.radius != 6.020797289396148 && circle.diameter != 12.041594578792296 ) {
+if (circle.radius != 6.020797289396148 && circle.diameter != 12.041594578792296) {
   console.log('increaseOrDecreaseByPercent() in Circle failed')
 }
 

@@ -5,8 +5,8 @@ The tests are conducted manually, the properties are set to the object and the f
 
 | Function | Properties | Expected Result | Result | Status |
 |----------|------------|-----------------|--------|--------|
-| getPerimeter() | length = 10, width = 8 | 36 | 36 | Passed |
 | getArea() | length = 10, width = 8 | 80 | 80 | Passed |
+| getPerimeter() | length = 10, width = 8 | 36 | 36 | Passed |
 
 | Function | In | Properties | New properties | Status |
 |----------|----|------------|----------------|--------|
