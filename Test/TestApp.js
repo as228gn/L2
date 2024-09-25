@@ -9,6 +9,9 @@ import { RightAngledTriangle } from '../src/RightAngledTriangle.js'
 import { Rectangle } from '../src/Rectangle.js'
 import { Circle } from '../src/Circle.js'
 
+/**
+ * Test for all functions in the public interface for RightAngledTriangle.
+ */
 const triangle = new RightAngledTriangle()
 
 triangle.oppositeSide = 10
@@ -77,6 +80,9 @@ if (triangle.adjacentSide != 9.633275663033837 && triangle.oppositeSide != 12.04
   console.log('increaseOrDecreaseByPercent() in RightAngledTriangel failed')
 }
 
+/**
+ * Test for all functions in the public interface for Rectangle.
+ */
 const rectangle = new Rectangle()
 
 rectangle.length = 10
@@ -97,6 +103,9 @@ if (rectangle.length != 12.041594578792296 && rectangle.width != 9.6332756630338
   console.log('increaseOrDecreaseByPercent() in Rectangle failed')
 }
 
+/**
+ * Test for all functions in the public interface for Circle.
+ */
 const circle = new Circle()
 
 circle.radius = 5
@@ -120,6 +129,40 @@ if (circumferenceD != 31.41592653589793) {
 const increaseCircle = circle.increaseOrDecreaseByPercent(45)
 if (circle.radius != 6.020797289396148 && circle.diameter != 12.041594578792296) {
   console.log('increaseOrDecreaseByPercent() in Circle failed')
+}
+
+/**
+ * Test for validate function.
+ */
+try {
+  const trianglePositive = new RightAngledTriangle()
+  trianglePositive.adjacentSide = -2
+
+  const rectanglePositive = new Rectangle()
+  rectanglePositive.length = -5
+
+  const circleString = new Circle()
+  circleString.diameter = 'Hej'
+
+} catch {
+  console.log('Validate function passed.')
+}
+
+/**
+ * Test for checking if the object has properties.
+ */
+try {
+  const triangleEmpty = new RightAngledTriangle()
+  triangleEmpty.getAdjacentAngleWithOppositeAngle()
+
+  const rectangleEmpty = new Rectangle()
+  rectangleEmpty.getPerimeter()
+
+  const circleEmpty = new Circle()
+  circleEmpty.getCircumferenceWithDiameter()
+
+} catch {
+  console.log('Errors caught successfully.')
 }
 
 console.log('')
