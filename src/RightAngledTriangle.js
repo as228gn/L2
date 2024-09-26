@@ -237,6 +237,8 @@ export class RightAngledTriangle {
     if (!this.#hypotenuse || !this.#adjacentSide || !this.#oppositeSide) {
       throw new Error('Function call must contain hypotenuse, adjacentside and oppositeside.')
     }
+    const validate = new Validate()
+    validate.validateNumber(percent)
 
     const p = (100 + percent) / 100
     const a = Math.sqrt(p)

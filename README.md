@@ -1,10 +1,14 @@
 # Geometry module
-This is a geometry module that helps you calculate different calculations on a right-angled triangle, rectangle and circle. It helps you calculate the area and perimeter. On the right-angled triangle it also helps you calculate the angles and sides. For all three shapes you can increase the area by a percentage and get the new measurements for the different sides.
+This is a geometry module that helps you calculate different calculations on a right-angled triangle, rectangle and circle. It helps you calculate the area and perimeter.  
+On the right-angled triangle it also helps you calculate the angles and sides. For all three shapes you can increase or decrease the area by a percentage and get the new measurements for the different sides.
 
 ## Installation
+npm install geometry_ltwo  
+or  
+clone this [repository](https://github.com/as228gn/L2) from github and copy the src-folder into your code
 ## Usage
 To use the module you import the class you want to use (Circle, Rectangle or RightAngledTriangle) and make a new object of it, you set the known properties and call the function you want to use. Se example below.
-![Example](img/CodeExample.png)
+![Example](https://github.com/as228gn/L2/blob/main/img/CodeExample.png?raw=true)
 ### Circle
 #### Properties
 radius  
@@ -44,7 +48,7 @@ oppositeAngle
 angle = 90  
 
 To call the functions correctly, it is important to know which property is which. See picture below to understand their locations.
-![Triangle](img/RightSidedTriangle.png)
+![Triangle](https://github.com/as228gn/L2/blob/main/img/RightSidedTriangle.png?raw=true)
 #### Functions
 getAreaWithThreeSides()  
 Returns the area, needs the hypotenuse, adjacentSide and oppositeSide properties.  

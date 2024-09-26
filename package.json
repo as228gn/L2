@@ -1,14 +1,14 @@
 {
-  "name": "l2",
+  "name": "geometry_ltwo",
   "version": "1.0.0",
   "description": "Geometry module",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node index.js",
     "test": "node Test/TestApp.js"
   },
   "keywords": [],
-  "author": "Anna Ståhlberg",
+  "author": "Anna Ståhlberg <as228gn@student.lnu.se>",
   "license": "MIT"
 }

@@ -70,6 +70,8 @@ export class Rectangle {
     if (!this.#length || !this.#width) {
       throw new Error('Function call must contain length and width.')
     }
+    const validate = new Validate()
+    validate.validateNumber(percent)
 
     const p = (100 + percent) / 100
     const a = Math.sqrt(p)

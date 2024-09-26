@@ -83,6 +83,8 @@ export class Circle {
     if (!this.#radius) {
       throw new Error('Function call must contain radius.')
     }
+    const validate = new Validate()
+    validate.validateNumber(percent)
 
     const p = (100 + percent) / 100
     const a = Math.sqrt(p)

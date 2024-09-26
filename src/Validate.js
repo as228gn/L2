@@ -18,4 +18,16 @@ export class Validate {
       throw new Error('Parameter must be a positive number.')
     }
   }
+
+  /**
+   * Validate the value as a number.
+   *
+   * @throws {Error} Throws an error if the value is not a number.
+   * @param { number } value The value to validate as a number.
+   */
+  validateNumber(value) {
+    if (typeof value === 'string') {
+      throw new Error('Parameter must be a number.')
+    }
+  }
 }
