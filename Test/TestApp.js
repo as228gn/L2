@@ -152,14 +152,33 @@ try {
  * Test for checking if the object has properties.
  */
 try {
+  //RightAngledTriangel
   const triangleEmpty = new RightAngledTriangle()
+  triangleEmpty.getAreaWithThreeSides()
+  triangleEmpty.getPerimeter()
+  triangleEmpty.getHypotenuse()
+  triangleEmpty.getOppositeSideWithAdjacentSideAndHypotenuse()
+  triangleEmpty.getAdjacentSideWithOppositeSideAndHypotenuse()
+  triangleEmpty.getOppositeAngleWithAdjacentAngle()
   triangleEmpty.getAdjacentAngleWithOppositeAngle()
+  triangleEmpty.getAdjacentSideWithAdjacentAngleAndHypotenuse()
+  triangleEmpty.getHypotenuseWithAdjacentAngleAndSide()
+  triangleEmpty.getAdjacentAngleWithAdjacentSideAndHypotenus()
+  triangleEmpty.getOppositeAngleWithOppositeSideAndHypotenuse()
+  triangleEmpty.increaseOrDecreaseByPercent(45)
 
+  //Rectangle
   const rectangleEmpty = new Rectangle()
+  rectangleEmpty.getArea()
   rectangleEmpty.getPerimeter()
-
+  rectangleEmpty.increaseOrDecreaseByPercent(45)
+  
+  //Circle
   const circleEmpty = new Circle()
+  circleEmpty.getArea()
+  circleEmpty.getCircumferenceWithRadius()
   circleEmpty.getCircumferenceWithDiameter()
+  circleEmpty.increaseOrDecreaseByPercent(45)
 
 } catch {
   console.log('Errors caught successfully.')
