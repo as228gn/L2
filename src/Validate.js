@@ -14,8 +14,11 @@ export class Validate {
    * @param { number } value The value to validate as a positive number.
    */
   validatePositiveNumber(value) {
-    if (value < 1 || typeof value === 'string') {
+    if (typeof value != 'number' || isNaN(value)) {
       throw new Error('Parameter must be a positive number.')
+    }
+    if (value < 1) {
+      throw new Error('Parameter must be a positive number')
     }
   }
 
@@ -26,7 +29,7 @@ export class Validate {
    * @param { number } value The value to validate as a number.
    */
   validateNumber(value) {
-    if (typeof value === 'string') {
+    if (typeof value != 'number' || isNaN(value)) {
       throw new Error('Parameter must be a number.')
     }
   }

@@ -7,36 +7,38 @@ npm install geometry_ltwo
 or  
 clone this [repository](https://github.com/as228gn/L2) from github and copy the src-folder into your code
 ## Usage
-To use the module you import the class you want to use (Circle, Rectangle or RightAngledTriangle) and make a new object of it, you set the known properties and call the function you want to use. Se example below.
+To use the module you import the class you want to use (Circle, Rectangle or RightAngledTriangle) and make a new object of it, you set the known properties and call the function you want to use.  
+Se example below.  
+
 ![Example](https://github.com/as228gn/L2/blob/main/img/CodeExample.png?raw=true)
 ### Circle
 #### Properties
 radius  
 diameter
 #### Functions
-getArea()  
+**getArea()**  
 Returns the area, needs the radius property.  
 
-getCircumferenceWithRadius()  
+**getCircumferenceWithRadius()**  
 Returns the circumference, needs the radius property.  
 
-getCircumferenceWithDiameter()  
+**getCircumferenceWithDiameter()**  
 Returns the circumference, needs the diameter property.  
   
-increaseOrDecreaseByPercent()  
+**increaseOrDecreaseByPercent()**  
 Sets the new property measurments to increase the percentage by the percent being sent in to the function.  
 ### Rectangle
 #### Properties
 length  
 width
 #### Functions
-getArea()  
+**getArea()**  
 Returns the perimeter, needs the length and width properties.  
 
-getPerimeter()  
+**getPerimeter()**  
 Returns the perimeter, needs the length and width properties.  
 
-increaseOrDecreaseByPercent()  
+**increaseOrDecreaseByPercent()**  
 Sets the new property measurments to increase the percentage by the percent being sent in to the function.  
 ### RightAngledTriangle
 #### Properties
@@ -45,45 +47,47 @@ adjacentSide
 oppositeSide  
 adjacentAngle  
 oppositeAngle  
-angle = 90  
+angle = 90  (already set)
 
-To call the functions correctly, it is important to know which property is which. See picture below to understand their locations.
+To call the functions correctly, it is important to know which property is which.  
+See picture below to understand their locations.  
+
 ![Triangle](https://github.com/as228gn/L2/blob/main/img/RightSidedTriangle.png?raw=true)
 #### Functions
-getAreaWithThreeSides()  
+**getAreaWithThreeSides()**  
 Returns the area, needs the hypotenuse, adjacentSide and oppositeSide properties.  
 
-getPerimeter()  
+**getPerimeter()**  
 Returns the perimeter, needs the hypotenuse, adjacentSide and oppositeSide properties.  
 
-getHypotenuse()  
+**getHypotenuse()**  
 Returns the hypotenuse, needs the adjacentSide and oppositeSide properties.  
 
-getOppositeSideWithAdjacentSideAndHypotenuse()  
+**getOppositeSideWithAdjacentSideAndHypotenuse()**  
 Returns the oppositeSide, needs the adjacentSide and the hypotenuse properties.  
 
-getAdjacentSideWithOppositeSideAndHypotenuse()  
+**getAdjacentSideWithOppositeSideAndHypotenuse()**  
 Returns the adjacentSide, needs the oppositeSide and the hypotenuse properties.  
 
-getOppositeAngleWithAdjacentAngle()  
+**getOppositeAngleWithAdjacentAngle()**  
 Returns the oppositeAngle, needs the adjacentAngle property.  
 
-getAdjacentAngleWithOppositeAngle()  
+**getAdjacentAngleWithOppositeAngle()**  
 Returns the adjacentAngle, needs the oppositeAngle property.  
 
-getAdjacentSideWithAdjacentAngleAndHypotenuse()  
+**getAdjacentSideWithAdjacentAngleAndHypotenuse()**  
 Returns the adjacentSide, needs the adjacentAngle and the hypotenuse properties.  
 
-getHypotenuseWithAdjacentAngleAndSide()  
+**getHypotenuseWithAdjacentAngleAndSide()**  
 Returns the hypotenuse, needs the adjacentAngle and the adjacentSide properties.  
 
-getAdjacentAngleWithAdjacentSideAndHypotenus()  
+**getAdjacentAngleWithAdjacentSideAndHypotenus()**  
 Returns the adjacentAngle, needs the adjacentSide and the hypotenuse properties.  
 
-getOppositeAngleWithOppositeSideAndHypotenuse()  
+**getOppositeAngleWithOppositeSideAndHypotenuse()**  
 Returns the oppositeAngle, needs the oppositeSide and the hypotenuse properties.  
 
-increaseOrDecreaseByPercent()  
+**increaseOrDecreaseByPercent()**  
 Sets the new property measurments to increase the percentage by the percent being sent in to the function.  
 
 ## License

@@ -11,4 +11,4 @@ The tests are conducted manually, the properties are set to the object and the f
 
 | Function | In | Properties | New properties | Status |
 |----------|----|------------|----------------|--------|
-| increaseOrDecreaseByPercent() | 45 |  radius = 5, diameter = 10 | radius = 6.020797289396148, diameter = 12.041594578792296  | Passed |
+| increaseOrDecreaseByPercent() | 45 |  radius = 5<br>diameter = 10 | radius = 6.020797289396148<br>diameter = 12.041594578792296  | Passed |

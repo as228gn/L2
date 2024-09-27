@@ -137,16 +137,26 @@ if (circle.radius != 6.020797289396148 && circle.diameter != 12.041594578792296)
 try {
   const trianglePositive = new RightAngledTriangle()
   trianglePositive.adjacentSide = -2
-
-  const rectanglePositive = new Rectangle()
-  rectanglePositive.length = -5
-
-  const circleString = new Circle()
-  circleString.diameter = 'Hej'
-
 } catch {
-  console.log('Validate function passed.')
+  console.log('')
+  console.log('Validate function for must be a positive number passed.')
 }
+
+try {
+  const rectanglePositive = new Rectangle()
+  rectanglePositive.length = '10'
+} catch {
+  console.log('Validate function for must be a number passed.')
+}
+
+try {
+  const circleString = new Circle()
+  circleString.increaseOrDecreaseByPercent('45')
+} catch {
+  console.log('Second validate function for must be a number passed.')
+}
+
+
 
 /**
  * Test for checking if the object has properties.
@@ -155,33 +165,24 @@ try {
   //RightAngledTriangel
   const triangleEmpty = new RightAngledTriangle()
   triangleEmpty.getAreaWithThreeSides()
-  triangleEmpty.getPerimeter()
-  triangleEmpty.getHypotenuse()
-  triangleEmpty.getOppositeSideWithAdjacentSideAndHypotenuse()
-  triangleEmpty.getAdjacentSideWithOppositeSideAndHypotenuse()
-  triangleEmpty.getOppositeAngleWithAdjacentAngle()
-  triangleEmpty.getAdjacentAngleWithOppositeAngle()
-  triangleEmpty.getAdjacentSideWithAdjacentAngleAndHypotenuse()
-  triangleEmpty.getHypotenuseWithAdjacentAngleAndSide()
-  triangleEmpty.getAdjacentAngleWithAdjacentSideAndHypotenus()
-  triangleEmpty.getOppositeAngleWithOppositeSideAndHypotenuse()
-  triangleEmpty.increaseOrDecreaseByPercent(45)
+} catch {
+  console.log('Error in RightAngledTriangel caught successfully.')
+}
 
+try {
   //Rectangle
   const rectangleEmpty = new Rectangle()
   rectangleEmpty.getArea()
-  rectangleEmpty.getPerimeter()
-  rectangleEmpty.increaseOrDecreaseByPercent(45)
-  
+} catch {
+  console.log('Error in Rectangle caught successfully.')
+}
+
+try {
   //Circle
   const circleEmpty = new Circle()
-  circleEmpty.getArea()
   circleEmpty.getCircumferenceWithRadius()
-  circleEmpty.getCircumferenceWithDiameter()
-  circleEmpty.increaseOrDecreaseByPercent(45)
-
 } catch {
-  console.log('Errors caught successfully.')
+  console.log('Error in Circle caught successfully.')
 }
 
 console.log('')
