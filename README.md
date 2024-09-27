@@ -11,7 +11,7 @@ To use the module you import the class you want to use (Circle, Rectangle or Rig
 Se example below.  
 
 ![Example](https://github.com/as228gn/L2/blob/main/img/CodeExample.png?raw=true)
-### Circle
+## Circle
 #### Properties
 radius  
 diameter
@@ -27,7 +27,8 @@ Returns the circumference, needs the diameter property.
   
 **increaseOrDecreaseByPercent()**  
 Sets the new property measurments to increase the percentage by the percent being sent in to the function.  
-### Rectangle
+Needs the radius property. 
+## Rectangle
 #### Properties
 length  
 width
@@ -40,7 +41,8 @@ Returns the perimeter, needs the length and width properties.
 
 **increaseOrDecreaseByPercent()**  
 Sets the new property measurments to increase the percentage by the percent being sent in to the function.  
-### RightAngledTriangle
+Needs the length and width properties.  
+## RightAngledTriangle
 #### Properties
 hypotenuse  
 adjacentSide  
@@ -89,6 +91,10 @@ Returns the oppositeAngle, needs the oppositeSide and the hypotenuse properties.
 
 **increaseOrDecreaseByPercent()**  
 Sets the new property measurments to increase the percentage by the percent being sent in to the function.  
+Needs the hypotenuse, adjacentSide and oppositeSide properties.  
+
+## Contributing
+Feel free to contribute, for questions email as228gn@student.lnu.se
 
 ## License
 MIT License
