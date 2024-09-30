@@ -2,7 +2,7 @@
  * @file Module for the class Circle.
  * @module src/Circle
  * @author Anna Ståhlberg <as228gn@student.lnu.se>
- * @version 1.0.0
+ * @version 1.0.2
  */
 
 import { Validate } from './Validate.js'

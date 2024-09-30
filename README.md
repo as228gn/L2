@@ -94,7 +94,7 @@ Sets the new property measurments to increase the percentage by the percent bein
 Needs the hypotenuse, adjacentSide and oppositeSide properties.  
 
 ## Contributing
-Feel free to contribute, for questions email as228gn@student.lnu.se
+Feel free to contribute, for any questions, email as228gn@student.lnu.se
 
 ## License
 MIT License
