@@ -1,7 +1,9 @@
 # Test Report Circle
 Date 2024-09-23  
 This report documents the tests of the Circle module.  
-The tests are conducted manually, the properties are set to the object and the function to be tested are called.
+The tests are conducted manually, the properties are set to the object and the function to be tested are called.  
+
+## Tests for correct set properties
 
 | Function | Properties | Expected Result | Result | Status |
 |----------|------------|-----------------|--------|--------|
@@ -12,3 +14,19 @@ The tests are conducted manually, the properties are set to the object and the f
 | Function | In | Properties | New properties | Status |
 |----------|----|------------|----------------|--------|
 | increaseOrDecreaseByPercent() | 45 |  radius = 5<br>diameter = 10 | radius = 6.020797289396148<br>diameter = 12.041594578792296  | Passed |
+
+## Test for no properties
+
+| Function | Properties | Expected Result | Result | Status |
+|----------|------------|-----------------|--------|--------|
+| getArea() | none | Error: Function call must contain radius. | Error: Function call must contain radius. | Passed |
+| getCircumferenceWithRadius() | none | Error: Function call must contain radius. | Error: Function call must contain radius. | Passed |
+| getCircumferenceWithDiameter() | none | Error: Function call must contain diameter. | Error: Function call must contain diameter. | Passed |
+
+| Function | In | Properties | Expected Result | Result | Status |
+|----------|----|------------|-----------------|--------|--------|
+| increaseOrDecreaseByPercent() | 45 |  none | Error: Function call must contain radius.  | Error: Function call must contain radius. | Passed |
+
+[TestRapport](testrapport.md)  
+[RightAngledTriangle](TestReportRightAngledTriangle.md)  
+[Rectangle](TestReportRectangle.md)

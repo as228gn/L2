@@ -1,7 +1,9 @@
 # Test Report Rectangle
 Date 2024-09-23  
 This report documents the tests of the Rectangle module.  
-The tests are conducted manually, the properties are set to the object and the function to be tested are called.
+The tests are conducted manually, the properties are set to the object and the function to be tested are called.  
+
+## Tests for correct set properties
 
 | Function | Properties | Expected Result | Result | Status |
 |----------|------------|-----------------|--------|--------|
@@ -11,3 +13,18 @@ The tests are conducted manually, the properties are set to the object and the f
 | Function | In | Properties | New properties | Status |
 |----------|----|------------|----------------|--------|
 | increaseOrDecreaseByPercent() | 45 |  length = 10<br>width = 8 | length = 12.041594578792296<br>width = 9.633275663033837 | Passed |
+
+## Test for no properties
+
+| Function | Properties | Expected Result | Result | Status |
+|----------|------------|-----------------|--------|--------|
+| getArea() | none | Error: Function call must contain length and width. | Error: Function call must contain length and width. | Passed |
+| getPerimeter() | none | Error: Function call must contain length and width. | Error: Function call must contain length and width. | Passed |
+
+| Function | In | Properties | Expected Result | Result | Status |
+|----------|----|------------|-----------------|--------|--------|
+| increaseOrDecreaseByPercent() | 45 | none | Error: Function call must contain length and width. | Error: Function call must contain length and width. | Passed |
+
+[TestRapport](testrapport.md)  
+[RightAngledTriangle](TestReportRightAngledTriangle.md)  
+[Circle](TestReportCircle.md)

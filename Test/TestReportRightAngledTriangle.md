@@ -3,6 +3,8 @@ Date 2024-09-23
 This report documents the tests of the RightAngledTriangle module.  
 The tests are conducted manually, the properties are set to the object and the function to be tested are called.  
 
+## Test for correct set properties
+
 | Function | Properties | Expected Result | Result | Status |
 |----------|------------|-----------------|--------|--------|
 | getAreaWithThreeSides()| adjacentSide = 8<br>oppositeSide = 10<br>hypotenuse = 12,8 | 39.999979999995 | 39.999979999995 | Passed |
@@ -20,3 +22,27 @@ The tests are conducted manually, the properties are set to the object and the f
 | Function | In | Properties | New properties | Status |
 |----------|----|------------|----------------|--------|
 | increaseOrDecreaseByPercent() | 45 |  adjacentSide = 8<br>oppositeSide = 10<br>hypotenuse = 12,8 | adjacentSide = 9.633275663033837<br>oppositeSide = 12.041594578792296<br>hypotenuse = 15.41324106085414 | Passed | 
+
+## Test for no properties
+
+| Function | Properties | Expected Result | Result | Status |
+|----------|------------|-----------------|--------|--------|
+| getAreaWithThreeSides()| none | Error: Function call must contain hypotenuse, adjacentside and oppositeside. | Error: Function call must contain hypotenuse, adjacentside and oppositeside. | Passed |
+| getPerimeter() | none | Error: Function call must contain hypotenuse, adjacentside and oppositeside. | Error: Function call must contain hypotenuse, adjacentside and oppositeside. | Passed |
+| getHypotenuse() | none | Error: Function call must contain adjacentside and oppositeside. | Error: Function call must contain adjacentside and oppositeside. | Passed |
+| getOppositeSideWithAdjacentSideAndHypotenuse() | none | Error: Function call must contain adjacentside and hypotenuse. | Error: Function call must contain adjacentside and hypotenuse. | Passed |
+| getAdjacentSideWithOppositeSideAndHypotenuse() | none | Error: Function call must contain adjacentside and oppositeside. | Error: Function call must contain adjacentside and oppositeside. | Passed |
+| getOppositeAngleWithAdjacentAngle() | none | Error: Function call must contain adjacentangle. | Error: Function call must contain adjacentangle. | Passed |
+| getAdjacentAngleWithOppositeAngle() | none | Error: Function call must contain oppositeangle. | Error: Function call must contain oppositeangle. | Passed |
+| getAdjacentSideWithAdjacentAngleAndHypotenuse() | none | Error: Function call must contain hypotenuse and adjacentangle. | Error: Function call must contain hypotenuse and adjacentangle. | Passed |
+| getHypotenuseWithAdjacentAngleAndSide() | none | Error: Function call must contain adjacentside and adjacentangle. | Error: Function call must contain adjacentside and adjacentangle. | Passed |
+| getAdjacentAngleWithAdjacentSideAndHypotenus()| none | Error: Function call must contain hypotenuse and adjacentside. | Error: Function call must contain hypotenuse and adjacentside. | Passed |
+| getOppositeAngleWithOppositeSideAndHypotenuse() | none | Error: Function call must contain hypotenuse and oppositeside. | Error: Function call must contain hypotenuse and oppositeside. | Passed |
+  
+| Function | In | Properties | Expected Result | Result | Status |
+|----------|----|------------|-----------------|--------|--------|
+| increaseOrDecreaseByPercent() | 45 | none | Error: Function call must contain hypotenuse, adjacentside and oppositeside. | Error: Function call must contain hypotenuse, adjacentside and oppositeside. |Passed | 
+
+[TestRapport](testrapport.md)  
+[Rectangle](TestReportRectangle.md)  
+[Circle](TestReportCircle.md)
