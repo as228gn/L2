@@ -56,7 +56,7 @@ See picture below to understand their locations.
 
 ![Triangle](https://github.com/as228gn/L2/blob/main/img/RightSidedTriangle.png?raw=true)
 #### Functions
-**getAreaWithThreeSides()**  
+**getArea()**  
 Returns the area, needs the hypotenuse, adjacentSide and oppositeSide properties.  
 
 **getPerimeter()**  
@@ -65,28 +65,28 @@ Returns the perimeter, needs the hypotenuse, adjacentSide and oppositeSide prope
 **getHypotenuse()**  
 Returns the hypotenuse, needs the adjacentSide and oppositeSide properties.  
 
-**getOppositeSideWithAdjacentSideAndHypotenuse()**  
+**getOppositeSide()**  
 Returns the oppositeSide, needs the adjacentSide and the hypotenuse properties.  
 
-**getAdjacentSideWithOppositeSideAndHypotenuse()**  
+**getAdjacentSide()**  
 Returns the adjacentSide, needs the oppositeSide and the hypotenuse properties.  
 
-**getOppositeAngleWithAdjacentAngle()**  
+**getOppositeAngle()**  
 Returns the oppositeAngle, needs the adjacentAngle property.  
 
-**getAdjacentAngleWithOppositeAngle()**  
+**getAdjacentAngle()**  
 Returns the adjacentAngle, needs the oppositeAngle property.  
 
-**getAdjacentSideWithAdjacentAngleAndHypotenuse()**  
+**getAdjacentSideWithAngle()**  
 Returns the adjacentSide, needs the adjacentAngle and the hypotenuse properties.  
 
-**getHypotenuseWithAdjacentAngleAndSide()**  
+**getHypotenuseWithAngle()**  
 Returns the hypotenuse, needs the adjacentAngle and the adjacentSide properties.  
 
-**getAdjacentAngleWithAdjacentSideAndHypotenus()**  
+**getAdjacentAngleWithSide()**  
 Returns the adjacentAngle, needs the adjacentSide and the hypotenuse properties.  
 
-**getOppositeAngleWithOppositeSideAndHypotenuse()**  
+**getOppositeAngleWithSide()**  
 Returns the oppositeAngle, needs the oppositeSide and the hypotenuse properties.  
 
 **increaseOrDecreaseByPercent()**  

@@ -34,7 +34,7 @@ export class Circle {
     return this.#radius
   }
 
-  /**
+ /**
   * Returns the area.
   *
   * @throws {Error} Throws an error if the radius property is not defined.

@@ -78,7 +78,7 @@ export class RightAngledTriangle {
    * @throws {Error} Throws an error if the hypotenuse, the adjacentSide or the oppositeSide property is not defined.
    * @returns { number } The area of the rightAngledTriangle.
    */
-  getAreaWithThreeSides() {
+  getArea() {
     if (!this.#hypotenuse || !this.#adjacentSide || !this.#oppositeSide) {
       throw new Error('Function call must contain hypotenuse, adjacentside and oppositeside.')
     }
@@ -119,7 +119,7 @@ export class RightAngledTriangle {
    * @throws {Error} Throws an error if the hypotenuse or the adjacentSide property is not defined.
    * @returns { number } The oppositeside of the rightAngledTriangle.
    */
-  getOppositeSideWithAdjacentSideAndHypotenuse() {
+  getOppositeSide() {
     if (!this.#adjacentSide || !this.#hypotenuse) {
       throw new Error('Function call must contain adjacentside and hypotenuse.')
     }
@@ -132,7 +132,7 @@ export class RightAngledTriangle {
    * @throws {Error} Throws an error if the hypotenuse or the oppositeSide property is not defined.
    * @returns { number } The adjacentside of the rightAngledTriangle.
    */
-  getAdjacentSideWithOppositeSideAndHypotenuse() {
+  getAdjacentSide() {
     if (!this.#oppositeSide || !this.#hypotenuse) {
       throw new Error('Function call must contain adjacentside and oppositeside.')
     }
@@ -145,7 +145,7 @@ export class RightAngledTriangle {
    * @throws {Error} Throws an error if the adjacentAngle property is not defined.
    * @returns { number } The opposite angle of the rightAngledTriangle.
    */
-  getOppositeAngleWithAdjacentAngle() {
+  getOppositeAngle() {
     if (!this.#adjacentAngle) {
       throw new Error('Function call must contain adjacentangle.')
     }
@@ -158,7 +158,7 @@ export class RightAngledTriangle {
    * @throws {Error} Throws an error if the oppositeAngle property is not defined.
    * @returns { number } The adjacent angle of the rightAngledTriangle.
    */
-  getAdjacentAngleWithOppositeAngle() {
+  getAdjacentAngle() {
     if (!this.#oppositeAngle) {
       throw new Error('Function call must contain oppositeangle.')
     }
@@ -171,7 +171,7 @@ export class RightAngledTriangle {
   * @throws {Error} Throws an error if the hypotenuse, the adjacentAngle property is not defined.
   * @returns { number } The adjacent side of the rightAngledTriangle.
   */
-  getAdjacentSideWithAdjacentAngleAndHypotenuse() {
+  getAdjacentSideWithAngle() {
     if (!this.#hypotenuse || !this.#adjacentAngle) {
       throw new Error('Function call must contain hypotenuse and adjacentangle.')
     }
@@ -186,7 +186,7 @@ export class RightAngledTriangle {
   * @throws {Error} Throws an error if the adjacentSide or the adjacentAngle property is not defined.
   * @returns { number } The hypotenuse of the rightAngledTriangle.
   */
-  getHypotenuseWithAdjacentAngleAndSide() {
+  getHypotenuseWithAngle() {
     if (!this.#adjacentSide || !this.#adjacentAngle) {
       throw new Error('Function call must contain adjacentside and adjacentangle.')
     }
@@ -201,7 +201,7 @@ export class RightAngledTriangle {
   * @throws {Error} Throws an error if the hypotenuse or the adjacentSide property is not defined.
   * @returns { number } The adjacent angle of the rightAngledTriangle.
   */
-  getAdjacentAngleWithAdjacentSideAndHypotenus() {
+  getAdjacentAngleWithSide() {
     if (!this.#hypotenuse || !this.#adjacentSide) {
       throw new Error('Function call must contain hypotenuse and adjacentside.')
     }
@@ -217,7 +217,7 @@ export class RightAngledTriangle {
   * @throws {Error} Throws an error if the hypotenuse or the oppositeSide property is not defined.
   * @returns { number } The opposite angle of the rightAngledTriangle.
   */
-  getOppositeAngleWithOppositeSideAndHypotenuse() {
+  getOppositeAngleWithSide() {
     if (!this.#hypotenuse || !this.#oppositeSide) {
       throw new Error('Function call must contain hypotenuse and oppositeside.')
     }
