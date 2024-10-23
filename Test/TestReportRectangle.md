@@ -18,12 +18,12 @@ The tests are conducted manually, the properties are set to the object and the f
 
 | Function | Properties | Expected Result | Result | Status |
 |----------|------------|-----------------|--------|--------|
-| getArea() | none | Error: Function call must contain length and width. | Error: Function call must contain length and width. | Passed |
-| getPerimeter() | none | Error: Function call must contain length and width. | Error: Function call must contain length and width. | Passed |
+| getArea() | none | Error: getArea() in Rectangle must contain length and width. | Error: getArea() in Rectangle must contain length and width.. | Passed |
+| getPerimeter() | none | Error: getPerimeter() in Rectangle must contain length and width. | Error: getPerimeter() in Rectangle must contain length and width. | Passed |
 
 | Function | In | Properties | Expected Result | Result | Status |
 |----------|----|------------|-----------------|--------|--------|
-| increaseOrDecreaseByPercent() | 45 | none | Error: Function call must contain length and width. | Error: Function call must contain length and width. | Passed |
+| increaseOrDecreaseByPercent() | 45 | none | Error: increaseOrDecreaseByPercent() in Rectangle must contain length and width. | Error: increaseOrDecreaseByPercent() in Rectangle must contain length and width. | Passed |
 
 [TestRapport](testrapport.md)  
 [RightAngledTriangle](TestReportRightAngledTriangle.md)  

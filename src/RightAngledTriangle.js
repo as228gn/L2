@@ -80,7 +80,7 @@ export class RightAngledTriangle {
    */
   getArea() {
     if (!this.#hypotenuse || !this.#adjacentSide || !this.#oppositeSide) {
-      throw new Error('Function call must contain hypotenuse, adjacentside and oppositeside.')
+      throw new Error('getArea() in RightAngledTriangle must contain hypotenuse, adjacentside and oppositeside.')
     }
     const halfPerimeter = (this.#hypotenuse + this.#adjacentSide + this.#oppositeSide) / 2
 
@@ -95,7 +95,7 @@ export class RightAngledTriangle {
    */
   getPerimeter() {
     if (!this.#hypotenuse || !this.#adjacentSide || !this.#oppositeSide) {
-      throw new Error('Function call must contain hypotenuse, adjacentside and oppositeside.')
+      throw new Error('getPerimeter() in RightAngledTriangle must contain hypotenuse, adjacentside and oppositeside.')
     }
     return this.#hypotenuse + this.#adjacentSide + this.#oppositeSide
   }
@@ -108,7 +108,7 @@ export class RightAngledTriangle {
    */
   getHypotenuse() {
     if (!this.#adjacentSide || !this.#oppositeSide) {
-      throw new Error('Function call must contain adjacentside and oppositeside.')
+      throw new Error('getHypotenuse() in RightAngledTriangle must contain adjacentside and oppositeside.')
     }
     return Math.sqrt(Math.pow(this.#adjacentSide, 2) + Math.pow(this.#oppositeSide, 2))
   }
@@ -121,7 +121,7 @@ export class RightAngledTriangle {
    */
   getOppositeSide() {
     if (!this.#adjacentSide || !this.#hypotenuse) {
-      throw new Error('Function call must contain adjacentside and hypotenuse.')
+      throw new Error('getOppositeSide() in RightAngledTriangle must contain adjacentside and hypotenuse.')
     }
     return Math.sqrt(Math.pow(this.#hypotenuse, 2) - Math.pow(this.#adjacentSide, 2))
   }
@@ -134,7 +134,7 @@ export class RightAngledTriangle {
    */
   getAdjacentSide() {
     if (!this.#oppositeSide || !this.#hypotenuse) {
-      throw new Error('Function call must contain adjacentside and oppositeside.')
+      throw new Error('getAdjacenSide() in RightAngledTriangle must contain adjacentside and oppositeside.')
     }
     return Math.sqrt(Math.pow(this.#hypotenuse, 2) - Math.pow(this.#oppositeSide, 2))
   }
@@ -147,7 +147,7 @@ export class RightAngledTriangle {
    */
   getOppositeAngle() {
     if (!this.#adjacentAngle) {
-      throw new Error('Function call must contain adjacentangle.')
+      throw new Error('getOppositeAngle() in RightAngledTriangle must contain adjacentangle.')
     }
     return 180 - (this.#adjacentAngle + this.#angle)
   }
@@ -160,7 +160,7 @@ export class RightAngledTriangle {
    */
   getAdjacentAngle() {
     if (!this.#oppositeAngle) {
-      throw new Error('Function call must contain oppositeangle.')
+      throw new Error('getAdjacentAngle() in RightAngledTriangle must contain oppositeangle.')
     }
     return 180 - (this.#oppositeAngle + this.#angle)
   }
@@ -173,7 +173,7 @@ export class RightAngledTriangle {
   */
   getAdjacentSideWithAngle() {
     if (!this.#hypotenuse || !this.#adjacentAngle) {
-      throw new Error('Function call must contain hypotenuse and adjacentangle.')
+      throw new Error('getAdjacentSideWithAngle() in RightAngledTriangle must contain hypotenuse and adjacentangle.')
     }
     const radians = this.#adjacentAngle * (Math.PI / 180)
     const adjacentSide = this.#hypotenuse * Math.cos(radians)
@@ -188,7 +188,7 @@ export class RightAngledTriangle {
   */
   getHypotenuseWithAngle() {
     if (!this.#adjacentSide || !this.#adjacentAngle) {
-      throw new Error('Function call must contain adjacentside and adjacentangle.')
+      throw new Error('getHypotenuseWithAngle() in RightAngledTriangle must contain adjacentside and adjacentangle.')
     }
     const radians = this.#adjacentAngle * (Math.PI / 180)
     const hypotenuse = this.#adjacentSide / Math.cos(radians)
@@ -203,7 +203,7 @@ export class RightAngledTriangle {
   */
   getAdjacentAngleWithSide() {
     if (!this.#hypotenuse || !this.#adjacentSide) {
-      throw new Error('Function call must contain hypotenuse and adjacentside.')
+      throw new Error('getAdjacentAngleWithSide() in RightAngledTriangle must contain hypotenuse and adjacentside.')
     }
     const a = this.#adjacentSide / this.#hypotenuse
     let radiusAngle = Math.acos(a)
@@ -219,7 +219,7 @@ export class RightAngledTriangle {
   */
   getOppositeAngleWithSide() {
     if (!this.#hypotenuse || !this.#oppositeSide) {
-      throw new Error('Function call must contain hypotenuse and oppositeside.')
+      throw new Error('getOppositeAngleWithSide() in RightAngledTriangle must contain hypotenuse and oppositeside.')
     }
     const a = this.#oppositeSide / this.#hypotenuse
     let radiusAngle = Math.asin(a)
@@ -235,7 +235,7 @@ export class RightAngledTriangle {
   */
   increaseOrDecreaseByPercent(percent) {
     if (!this.#hypotenuse || !this.#adjacentSide || !this.#oppositeSide) {
-      throw new Error('Function call must contain hypotenuse, adjacentside and oppositeside.')
+      throw new Error('increaseOrDecreaseByPercent() in RightAngledTriangle must contain hypotenuse, adjacentside and oppositeside.')
     }
     const validate = new Validate()
     validate.validateNumber(percent)

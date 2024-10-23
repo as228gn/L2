@@ -3,9 +3,12 @@ This is a geometry module that helps you calculate different calculations on a r
 On the right-angled triangle it also helps you calculate the angles and sides. For all three shapes you can increase or decrease the area by a percentage and get the new measurements for the different sides.
 
 ## Installation
+To install using npm:
+```
 npm install geometry_ltwo  
-or  
-clone this [repository](https://github.com/as228gn/L2) from github and copy the src-folder into your code
+```
+
+or you can clone this [repository](https://github.com/as228gn/L2) from github and copy the src-folder into your code
 ## Usage
 To use the module you import the class you want to use (Circle, Rectangle or RightAngledTriangle) and make a new object of it, you set the known properties and call the function you want to use.  
 Se example below.  

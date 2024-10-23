@@ -42,7 +42,7 @@ export class Circle {
   */
   getArea() {
     if (!this.#radius) {
-      throw new Error('Function call must contain radius.')
+      throw new Error('getArea() in Circle must contain radius.')
     }
     return Math.PI * Math.pow(this.#radius, 2)
   }
@@ -55,7 +55,7 @@ export class Circle {
    */
   getCircumferenceWithRadius() {
     if (!this.#radius) {
-      throw new Error('Function call must contain radius.')
+      throw new Error('getCircumferenceWithRadius() in Circle must contain radius.')
     }
     return 2 * this.#radius * Math.PI
   }
@@ -68,7 +68,7 @@ export class Circle {
    */
   getCircumferenceWithDiameter() {
     if (!this.#diameter) {
-      throw new Error('Function call must contain diameter.')
+      throw new Error('getCircumferenceWithDiameter() in Circle must contain diameter.')
     }
     return this.#diameter * Math.PI
   }
@@ -81,7 +81,7 @@ export class Circle {
    */
   increaseOrDecreaseByPercent(percent) {
     if (!this.#radius) {
-      throw new Error('Function call must contain radius.')
+      throw new Error('increaseOrDecreaseByPercent() in Circle must contain radius.')
     }
     const validate = new Validate()
     validate.validateNumber(percent)

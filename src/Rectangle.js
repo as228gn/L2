@@ -42,7 +42,7 @@ export class Rectangle {
    */
   getArea() {
     if (!this.#length || !this.#width) {
-      throw new Error('Function call must contain length and width.')
+      throw new Error('getArea() in Rectangle must contain length and width.')
     }
     return this.#length * this.#width
   }
@@ -55,7 +55,7 @@ export class Rectangle {
   */
   getPerimeter() {
     if (!this.#length || !this.#width) {
-      throw new Error('Function call must contain length and width.')
+      throw new Error('getPerimeter() in Rectangle must contain length and width.')
     }
     return 2 * (this.#length + this.#width)
   }
@@ -68,7 +68,7 @@ export class Rectangle {
    */
   increaseOrDecreaseByPercent(percent) {
     if (!this.#length || !this.#width) {
-      throw new Error('Function call must contain length and width.')
+      throw new Error('increaseOrDecreaseByPercent() in Rectangle must contain length and width.')
     }
     const validate = new Validate()
     validate.validateNumber(percent)

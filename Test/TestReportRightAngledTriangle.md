@@ -27,21 +27,21 @@ The tests are conducted manually, the properties are set to the object and the f
 
 | Function | Properties | Expected Result | Result | Status |
 |----------|------------|-----------------|--------|--------|
-| getArea()| none | Error: Function call must contain hypotenuse, adjacentside and oppositeside. | Error: Function call must contain hypotenuse, adjacentside and oppositeside. | Passed |
-| getPerimeter() | none | Error: Function call must contain hypotenuse, adjacentside and oppositeside. | Error: Function call must contain hypotenuse, adjacentside and oppositeside. | Passed |
-| getHypotenuse() | none | Error: Function call must contain adjacentside and oppositeside. | Error: Function call must contain adjacentside and oppositeside. | Passed |
-| getOppositeSide() | none | Error: Function call must contain adjacentside and hypotenuse. | Error: Function call must contain adjacentside and hypotenuse. | Passed |
-| getAdjacentSide() | none | Error: Function call must contain adjacentside and oppositeside. | Error: Function call must contain adjacentside and oppositeside. | Passed |
-| getOppositeAngle() | none | Error: Function call must contain adjacentangle. | Error: Function call must contain adjacentangle. | Passed |
-| getAdjacentAngle() | none | Error: Function call must contain oppositeangle. | Error: Function call must contain oppositeangle. | Passed |
-| getAdjacentSideWithAngle() | none | Error: Function call must contain hypotenuse and adjacentangle. | Error: Function call must contain hypotenuse and adjacentangle. | Passed |
-| getHypotenuseWithAngle() | none | Error: Function call must contain adjacentside and adjacentangle. | Error: Function call must contain adjacentside and adjacentangle. | Passed |
-| getAdjacentAngleWithSide()| none | Error: Function call must contain hypotenuse and adjacentside. | Error: Function call must contain hypotenuse and adjacentside. | Passed |
-| getOppositeAngleWithSide() | none | Error: Function call must contain hypotenuse and oppositeside. | Error: Function call must contain hypotenuse and oppositeside. | Passed |
+| getArea()| none | Error: getArea() in RightAngledTriangle must contain hypotenuse, adjacentside and oppositeside. | Error: getArea() in RightAngledTriangle must contain hypotenuse, adjacentside and oppositeside.. | Passed |
+| getPerimeter() | none | Error: getPerimeter() in RightAngledTriangle must contain hypotenuse, adjacentside and oppositeside. | Error: getPerimeter() in RightAngledTriangle must contain hypotenuse, adjacentside and oppositeside.. | Passed |
+| getHypotenuse() | none | Error: getHypotenuse() in RightAngledTriangle must contain adjacentside and oppositeside. | Error: getHypotenuse() in RightAngledTriangle must contain adjacentside and oppositeside. | Passed |
+| getOppositeSide() | none | Error: getOppositeSide() in RightAngledTriangle must contain adjacentside and hypotenuse. | Error: getOppositeSide() in RightAngledTriangle must contain adjacentside and hypotenuse. | Passed |
+| getAdjacentSide() | none | Error: getAdjacenSide() in RightAngledTriangle must contain adjacentside and oppositeside. | Error: getAdjacenSide() in RightAngledTriangle must contain adjacentside and oppositeside. | Passed |
+| getOppositeAngle() | none | Error: getOppositeAngle() in RightAngledTriangle must contain adjacentangle. | Error: getOppositeAngle() in RightAngledTriangle must contain adjacentangle. | Passed |
+| getAdjacentAngle() | none | Error: getAdjacentAngle() in RightAngledTriangle must contain oppositeangle. | Error: getAdjacentAngle() in RightAngledTriangle must contain oppositeangle. | Passed |
+| getAdjacentSideWithAngle() | none | Error: getAdjacentSideWithAngle() in RightAngledTriangle must contain hypotenuse and adjacentangle.. | Error: getAdjacentSideWithAngle() in RightAngledTriangle must contain hypotenuse and adjacentangle. | Passed |
+| getHypotenuseWithAngle() | none | Error: getHypotenuseWithAngle() in RightAngledTriangle must contain adjacentside and adjacentangle. | Error: getHypotenuseWithAngle() in RightAngledTriangle must contain adjacentside and adjacentangle. | Passed |
+| getAdjacentAngleWithSide()| none | Error: getAdjacentAngleWithSide() in RightAngledTriangle must contain hypotenuse and adjacentside. | Error: getAdjacentAngleWithSide() in RightAngledTriangle must contain hypotenuse and adjacentside. | Passed |
+| getOppositeAngleWithSide() | none | Error: getOppositeAngleWithSide() in RightAngledTriangle must contain hypotenuse and oppositeside. | Error: getOppositeAngleWithSide() in RightAngledTriangle must contain hypotenuse and oppositeside. | Passed |
   
 | Function | In | Properties | Expected Result | Result | Status |
 |----------|----|------------|-----------------|--------|--------|
-| increaseOrDecreaseByPercent() | 45 | none | Error: Function call must contain hypotenuse, adjacentside and oppositeside. | Error: Function call must contain hypotenuse, adjacentside and oppositeside. |Passed | 
+| increaseOrDecreaseByPercent() | 45 | none | Error: increaseOrDecreaseByPercent() in RightAngledTriangle must contain hypotenuse, adjacentside and oppositeside. | Error: increaseOrDecreaseByPercent() in RightAngledTriangle must contain hypotenuse, adjacentside and oppositeside. |Passed | 
 
 [TestRapport](testrapport.md)  
 [Rectangle](TestReportRectangle.md)  

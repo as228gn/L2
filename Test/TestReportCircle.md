@@ -19,13 +19,13 @@ The tests are conducted manually, the properties are set to the object and the f
 
 | Function | Properties | Expected Result | Result | Status |
 |----------|------------|-----------------|--------|--------|
-| getArea() | none | Error: Function call must contain radius. | Error: Function call must contain radius. | Passed |
-| getCircumferenceWithRadius() | none | Error: Function call must contain radius. | Error: Function call must contain radius. | Passed |
-| getCircumferenceWithDiameter() | none | Error: Function call must contain diameter. | Error: Function call must contain diameter. | Passed |
+| getArea() | none | Error: getArea() in Circle must contain radius. | Error: getArea() in Circle must contain radius. | Passed |
+| getCircumferenceWithRadius() | none | Error: getCircumferenceWithRadius() in Circle must contain radius. | Error: getCircumferenceWithRadius() in Circle must contain radius. | Passed |
+| getCircumferenceWithDiameter() | none | Error: getCircumferenceWithDiameter() in Circle must contain diameter. | Error: getCircumferenceWithDiameter() in Circle must contain diameter. | Passed |
 
 | Function | In | Properties | Expected Result | Result | Status |
 |----------|----|------------|-----------------|--------|--------|
-| increaseOrDecreaseByPercent() | 45 |  none | Error: Function call must contain radius.  | Error: Function call must contain radius. | Passed |
+| increaseOrDecreaseByPercent() | 45 |  none | Error: increaseOrDecreaseByPercent() in Circle must contain radius.  | Error: increaseOrDecreaseByPercent() in Circle must contain radius. | Passed |
 
 [TestRapport](testrapport.md)  
 [RightAngledTriangle](TestReportRightAngledTriangle.md)  
