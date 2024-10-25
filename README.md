@@ -13,7 +13,19 @@ or you can clone this [repository](https://github.com/as228gn/L2) from github an
 To use the module you import the class you want to use (Circle, Rectangle or RightAngledTriangle) and make a new object of it, you set the known properties and call the function you want to use.  
 Se example below.  
 
-![Example](https://github.com/as228gn/L2/blob/main/img/CodeExample.png?raw=true)
+```
+import { RightAngledTriangle } from 'geometry_ltwo'  
+
+const triangle = new RightAngledTriangle()  
+
+triangle.oppositeSide = 10  
+triangle.adjacentSide = 8  
+triangle.hypotenuse = 12.8  
+triangle.adjacentAngle = 51  
+triangle.oppositeAngle = 39  
+
+console.log(triangle.getArea())
+```
 ## Circle
 #### Properties
 radius  
