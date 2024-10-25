@@ -7,17 +7,17 @@ The tests are conducted manually, the properties are set to the object and the f
 
 | Function | Properties | Expected Result | Result | Status |
 |----------|------------|-----------------|--------|--------|
-| getAreaWithThreeSides()| adjacentSide = 8<br>oppositeSide = 10<br>hypotenuse = 12,8 | 39.999979999995 | 39.999979999995 | Passed |
+| getArea()| adjacentSide = 8<br>oppositeSide = 10<br>hypotenuse = 12,8 | 39.999979999995 | 39.999979999995 | Passed |
 | getPerimeter() | adjacentSide = 8<br>oppositeSide = 10<br>hypotenuse = 12,8 | 30.8 | 30.8 | Passed |
 | getHypotenuse() | adjacentSide = 8<br>oppositeSide = 10 | 12.806248474865697 | 12.806248474865697 | Passed |
-| getOppositeSideWithAdjacentSideAndHypotenuse() | adjacentSide = 8<br>hypotenuse = 12,8 | 9.991996797437439 | 9.991996797437439 | Passed |
-| getAdjacentSideWithOppositeSideAndHypotenuse() | oppositeSide = 10<br>hypotenuse = 12,8 | 7.989993742175273 | 7.989993742175273 | Passed |
-| getOppositeAngleWithAdjacentAngle() | adjacentAngle = 51 | 39 | 39 | Passed |
-| getAdjacentAngleWithOppositeAngle() | oppositeAngle = 39 | 51 | 51 | Passed |
-| getAdjacentSideWithAdjacentAngleAndHypotenuse() | adjacentAngle = 51<br>hypotenuse = 12,8 | 8.05530100543792 | 8.05530100543792 | Passed |
-| getHypotenuseWithAdjacentAngleAndSide() | adjacentAngle = 51<br>adjacentSide = 8 | 12.712125832525995 | 12.712125832525995 | Passed |
-| getAdjacentAngleWithAdjacentSideAndHypotenus()| adjacentSide = 8<br>hypotenuse = 12,8 | 51.31781254651057 | 51.31781254651057 | Passed |
-| getOppositeAngleWithOppositeSideAndHypotenuse() | oppositeSide = 10<br>hypotenuse = 12,8 | 51.37516712694704 | 51.37516712694704 | Passed |
+| getOppositeSide() | adjacentSide = 8<br>hypotenuse = 12,8 | 9.991996797437439 | 9.991996797437439 | Passed |
+| getAdjacentSide() | oppositeSide = 10<br>hypotenuse = 12,8 | 7.989993742175273 | 7.989993742175273 | Passed |
+| getOppositeAngle() | adjacentAngle = 51 | 39 | 39 | Passed |
+| getAdjacentAngle() | oppositeAngle = 39 | 51 | 51 | Passed |
+| getAdjacentSideWithAngle() | adjacentAngle = 51<br>hypotenuse = 12,8 | 8.05530100543792 | 8.05530100543792 | Passed |
+| getHypotenuseWithAngle() | adjacentAngle = 51<br>adjacentSide = 8 | 12.712125832525995 | 12.712125832525995 | Passed |
+| getAdjacentAngleWithSide()| adjacentSide = 8<br>hypotenuse = 12,8 | 51.31781254651057 | 51.31781254651057 | Passed |
+| getOppositeAngleWithSide() | oppositeSide = 10<br>hypotenuse = 12,8 | 51.37516712694704 | 51.37516712694704 | Passed |
   
 | Function | In | Properties | New properties | Status |
 |----------|----|------------|----------------|--------|
