@@ -15,7 +15,7 @@ Testing complete, any failed tests can be seen above.
 Efter körd testgenomgång har alla publika funktioner, valideringsfunktionen samt att fel kastas testats.
 
 ### Resultat av semiautomatiserad testgenomgång
-Datum: 2024-09-30  
+Datum: 2024-10-24  
 | Start kommando | Förväntat Resultat | Resultat | Status |
 |----------------|--------------------|----------|--------|
 | npm test | Validate function for must be a positive number passed.<br>Validate function for must be a number passed.<br>Second validate function for must be a number passed.<br>Error in RightAngledTriangel caught successfully.<br>Error in Rectangle caught successfully.<br>Error in Circle caught successfully.<br><br>Testing complete, any failed tests can be seen above.| Validate function for must be a positive number passed.<br>Validate function for must be a number passed.<br>Second validate function for must be a number passed.<br>Error in RightAngledTriangel caught successfully.<br>Error in Rectangle caught successfully.<br>Error in Circle caught successfully.<br><br>Testing complete, any failed tests can be seen above | Passed |

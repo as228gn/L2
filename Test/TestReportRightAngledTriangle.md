@@ -1,5 +1,5 @@
 # Test Report RightAngledTriangle
-Date 2024-09-23  
+Date 2024-10-24  
 This report documents the tests of the RightAngledTriangle module.  
 The tests are conducted manually, the properties are set to the object and the function to be tested are called.  
 
